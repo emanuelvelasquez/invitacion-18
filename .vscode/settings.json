@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "[javascript,javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onSave"
+}
