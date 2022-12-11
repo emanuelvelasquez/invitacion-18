@@ -1,26 +1,9 @@
 // react-router-dom components
-import { Link } from 'react-router-dom'
 import React from 'react'
-
-// @mui material components
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
-import TextField from '@mui/material/TextField'
 
 // Material Kit 2 React components
 import MKBox from '../../components/MKBox'
-import MKAlert from '../../components/MKAlert'
-import MKButton from '../../components/MKButton'
-import MKBadge from '../../components/MKBadge'
 import MKTypography from '../../components/MKTypography'
-import MKInput from '../../components/MKInput'
-import FilledInfoCard from '../../examples/Cards/InfoCards/FilledInfoCard'
-
-// Presentation page components
-//import ExampleCard from 'pages/Presentation/components/ExampleCard'
-
-// Data
-//import data from 'pages/Presentation/sections/data/designBlocksData'
 
 function Ubicacion() {
   return (
@@ -36,25 +19,38 @@ function Ubicacion() {
         boxShadow: ({ boxShadows: { xxl } }) => xxl,
       }}
     >
-      {' '}
-      <MKTypography display="block" variant="h5" color="white" mt={-0.625}>
-        Ubicación:{' '}
+      <MKTypography
+        display="block"
+        variant="body1"
+        color="white"
+        mt={-0.625}
+        mb={2}
+      >
+        Se realizara el dia 26 de Enero, a las 21:00 Hs.
+      </MKTypography>
+      <MKTypography
+        display="block"
+        variant="h5"
+        color="white"
+        mt={-0.625}
+        mb={2}
+      >
+        Ubicación:
         <MKTypography display="block" variant="body2" color="white" mt={-0.625}>
           Emilio Bottini 1816, San Salvador de Jujuy, Jujuy
         </MKTypography>
       </MKTypography>
       <iframe
+        title="googleMaps"
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d454.802033588074!2d-65.27548850181023!3d-24.227215473618813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b06236165ca61%3A0x6d5a9435bcb66669!2sEmilio%20Bottini%201816%2C%20San%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses-419!2sar!4v1670700741396!5m2!1ses-419!2sar"
         style={{
           border: 0,
           position: 'relative',
-          height: '30vw',
+          height: '25vw',
           width: '100%',
           borderRadius: 5,
         }}
-        allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </MKBox>
   )

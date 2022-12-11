@@ -18,10 +18,13 @@ import { Link } from 'react-router-dom'
 
 // prop-types is a library for typechecking of props.
 import PropTypes from 'prop-types'
+import { IconButton } from '@mui/material'
 
 // @mui material components
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import CallIcon from '@mui/icons-material/Call'
 
 // Material Kit 2 React components
 import MKBox from '../../../components/MKBox'
@@ -41,30 +44,59 @@ function DefaultFooter({ content }) {
   }
 
   return (
-    <MKBox component="footer" mt={-10}>
+    <MKBox component="footer" mt={-10} alignItems="center">
       <Container>
         <Grid container spacing={1}>
           <Grid item xs={12} md={12} sx={{ ml: 'auto', mb: 3 }}>
             <MKBox>
               <Link to={brand.route}></Link>
-              <MKTypography variant="h5">Contactos:</MKTypography>
             </MKBox>
-            <MKBox display="flex" alignItems="center" mt={3}>
-              {socials.map(({ icon, link }, key) => (
+            <MKBox display="flex">
+              <MKTypography
+                component="a"
+                target="_blank"
+                rel="noreferrer"
+                variant="h5"
+                color="dark"
+                opacity={1}
+              >
+                Celular:
                 <MKTypography
-                  key={link}
                   component="a"
-                  href={link}
                   target="_blank"
                   rel="noreferrer"
                   variant="h5"
                   color="dark"
                   opacity={0.8}
-                  mr={key === socials.length - 1 ? 0 : 2.5}
                 >
-                  {icon}
+                  &ensp; +543884093365
                 </MKTypography>
-              ))}
+              </MKTypography>
+              &ensp;
+            </MKBox>
+            <MKBox display="flex">
+              <MKTypography
+                component="a"
+                target="_blank"
+                rel="noreferrer"
+                variant="h5"
+                color="dark"
+                opacity={1}
+              >
+                Medios:
+                <IconButton
+                  aria-label="WhatsApp"
+                  onClick={() => window.open('https://wa.me/5493884093365')}
+                >
+                  <WhatsAppIcon sx={{ color: '#344767' }} />
+                </IconButton>
+                <IconButton
+                  aria-label="WhatsApp"
+                  onClick={() => window.open('tel:3884093365')}
+                >
+                  <CallIcon sx={{ color: '#344767' }} />
+                </IconButton>
+              </MKTypography>
             </MKBox>
           </Grid>
           <Grid item xs={12} sx={{ textAlign: 'center', my: 1, mt: -3 }}>

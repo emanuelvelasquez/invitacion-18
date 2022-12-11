@@ -39,7 +39,7 @@ function PaginaPrincipal() {
               variant="h1"
               color="white"
               mt={-6}
-              mb={1}
+              mb={2}
               align="center"
               sx={({ breakpoints, typography: { size } }) => ({
                 [breakpoints.down('sm')]: {
@@ -57,7 +57,13 @@ function PaginaPrincipal() {
                 shadow="xxl"
               />
             </Grid>
-            <MKTypography variant="body2" color="white" mt={3} align="center">
+            <MKTypography
+              variant="body2"
+              color="white"
+              mt={3}
+              mb={3}
+              align="center"
+            >
               Lorem ipsum dolor sit amet consectetur adipiscing elit ac metus
               torquent tortor tristique ridiculus, ultrices porttitor odio
               platea justo lectus ullamcorper turpis conubia urna magnis.
@@ -71,7 +77,8 @@ function PaginaPrincipal() {
           pl: { xs: 2, lg: 5 },
           pr: { xs: 2, lg: 5 },
           pb: 6,
-          mx: { xs: 1, lg: 40 },
+          mx: { xs: 1, lg: '20%' },
+          width: { xs: '100', lg: '60%' },
           mt: -8,
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) =>
@@ -83,7 +90,12 @@ function PaginaPrincipal() {
         <Confirma />
         <Ubicacion />
       </Card>
-      <MKBox pt={6} px={1} mt={6}>
+      <MKBox
+        pt={6}
+        px={1}
+        mt={6}
+        sx={{ mx: { xs: 1, lg: '20%' }, width: { xs: '100', lg: '60%' } }}
+      >
         <DefaultFooter content={dataFooter} />
       </MKBox>
     </>
