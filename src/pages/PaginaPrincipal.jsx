@@ -47,7 +47,7 @@ function PaginaPrincipal() {
                 },
               })}
             >
-              Invitación 18 Años
+              Mis 18 Años
             </MKTypography>
             <Grid container justifyContent="center">
               <MKAvatar
@@ -64,9 +64,10 @@ function PaginaPrincipal() {
               mb={3}
               align="center"
             >
-              Lorem ipsum dolor sit amet consectetur adipiscing elit ac metus
-              torquent tortor tristique ridiculus, ultrices porttitor odio
-              platea justo lectus ullamcorper turpis conubia urna magnis.
+              En la vida he transitado por muchos caminos que me enseñaron
+              muchas cosas, donde recolecte muchas amistades, comprendí que
+              siempre hay que ir para adelante. Por eso quiero festejar este
+              momento tan especial junto a ustedes.
             </MKTypography>
           </Grid>
         </Container>
@@ -83,7 +84,7 @@ function PaginaPrincipal() {
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) =>
             rgba(white.main, 0.8),
-          backdropFilter: 'saturate(100%) blur(50px)',
+          backdropFilter: 'saturate(1%) blur(100px)',
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >

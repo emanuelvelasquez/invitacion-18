@@ -69,7 +69,7 @@ function DefaultFooter({ content }) {
                   color="dark"
                   opacity={0.8}
                 >
-                  &ensp; +543884093365
+                  &ensp; +54 9 388 434-4372
                 </MKTypography>
               </MKTypography>
               &ensp;

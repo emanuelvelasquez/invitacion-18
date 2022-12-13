@@ -8,6 +8,7 @@ import React from 'react'
 import theme from './assets/theme'
 
 import PaginaPrincipal from './pages/PaginaPrincipal'
+import TablaInvitados from './pages/TablaInvitados'
 
 function App() {
   const { pathname } = useLocation()
@@ -22,7 +23,7 @@ function App() {
       <CssBaseline />
       <Routes>
         <Route path="/" element={<PaginaPrincipal />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="Tabla" element={<TablaInvitados />} />
       </Routes>
     </ThemeProvider>
   )
