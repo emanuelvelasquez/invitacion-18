@@ -144,9 +144,9 @@ function Confirma() {
     <MKBox
       component="section"
       variant="contained"
-      py={1}
+      py={0}
       mb={5}
-      hight="50%"
+      //hight="50%"
       sx={{ borderRadius: 2, boxShadow: ({ boxShadows: { xxl } }) => xxl }}
     >
       <Container>
@@ -158,12 +158,13 @@ function Confirma() {
         >
           <MKTypography
             variant="h2"
-            fontWeight="bold"
             sx={({ breakpoints, typography: { size } }) => ({
               [breakpoints.down('sm')]: {
                 fontSize: size['2xl'],
               },
             })}
+            textTransform="capitalize"
+            fontWeight="regular"
           >
             Confirma Tu Asistencia
           </MKTypography>
@@ -242,6 +243,9 @@ function Confirma() {
             alignItems="center"
             sx={{ textAlign: 'center', mx: 'auto', mb: 2 }}
           >
+            <MKTypography variant="body1" color="text" sx={{ marginBottom: 2 }}>
+              Seleccionar las personas a confirmar
+            </MKTypography>
             <MKTypography variant="body2" color="text" sx={{ marginBottom: 2 }}>
               Total de Invitaciones a confirmar: {values.count}
             </MKTypography>

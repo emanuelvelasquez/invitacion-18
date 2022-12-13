@@ -59,6 +59,15 @@ export default function TablaInvitados(props) {
         })
       }
     })
+    lista.sort((a, b) => {
+      if (a.asistira.toLowerCase() > b.asistira.toLowerCase()) {
+        return -1
+      }
+      if (a.asistira.toLowerCase() < b.asistira.toLowerCase()) {
+        return 1
+      }
+      return 0
+    })
     setInvitados(lista)
     debugger
     setCountTotal(lista.length)
@@ -113,7 +122,7 @@ export default function TablaInvitados(props) {
 
   const options = {
     filterType: 'checkbox',
-
+    responsive: 'standard',
     selectableRows: false,
   }
 

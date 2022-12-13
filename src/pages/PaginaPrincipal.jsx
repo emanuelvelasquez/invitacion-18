@@ -8,6 +8,7 @@ import MKBox from '../components/MKBox'
 import MKTypography from '../components/MKTypography'
 import MKAvatar from '../components/MKAvatar'
 import DefaultFooter from '../examples/Footers/DefaultFooter'
+import CenteredBlogCard from '../examples/Cards/BlogCards/CenteredBlogCard'
 import React from 'react'
 
 import Confirma from './sections/Confirma'
@@ -23,7 +24,6 @@ function PaginaPrincipal() {
   return (
     <>
       <MKBox
-        minHeight="55vh"
         width="100%"
         sx={{
           backgroundImage: `url(${bgImage})`,
@@ -31,6 +31,7 @@ function PaginaPrincipal() {
           backgroundPosition: 'top',
           display: 'grid',
           placeItems: 'center',
+          minHeight: { xs: '50vh', lg: '55vh' },
         }}
       >
         <Container>
@@ -46,6 +47,8 @@ function PaginaPrincipal() {
                   fontSize: size['3xl'],
                 },
               })}
+              textTransform="capitalize"
+              fontWeight="regular"
             >
               Mis 18 Años
             </MKTypography>
@@ -53,16 +56,23 @@ function PaginaPrincipal() {
               <MKAvatar
                 src={avImage}
                 alt="A"
-                sx={{ height: '150px', width: '150px' }}
+                sx={{ height: '15vh', width: '15vh' }}
                 shadow="xxl"
               />
             </Grid>
             <MKTypography
-              variant="body2"
               color="white"
               mt={3}
               mb={3}
+              variant="body2"
               align="center"
+              sx={({ breakpoints, typography: { size } }) => ({
+                [breakpoints.down('sm')]: {
+                  fontSize: '0.8em',
+                },
+              })}
+              textTransform="capitalize"
+              fontWeight="regular"
             >
               En la vida he transitado por muchos caminos que me enseñaron
               muchas cosas, donde recolecte muchas amistades, comprendí que
@@ -72,6 +82,7 @@ function PaginaPrincipal() {
           </Grid>
         </Container>
       </MKBox>
+
       <Card
         sx={{
           pt: 2,
@@ -80,7 +91,7 @@ function PaginaPrincipal() {
           pb: 6,
           mx: { xs: 1, lg: '20%' },
           width: { xs: '100', lg: '60%' },
-          mt: -8,
+          mt: { xs: -4, lg: -8 },
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) =>
             rgba(white.main, 0.8),
@@ -88,6 +99,11 @@ function PaginaPrincipal() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        <CenteredBlogCard
+          title="Te espero el 14 de enero de 2023 a las 21:30 hs."
+          image={bgImage}
+          // description="asdasdas"
+        />
         <Confirma />
         <Ubicacion />
       </Card>

@@ -21,15 +21,6 @@ function Ubicacion() {
     >
       <MKTypography
         display="block"
-        variant="body1"
-        color="white"
-        mt={-0.625}
-        mb={2}
-      >
-        Se realizara el dia 26 de Enero, a las 21:00 Hs.
-      </MKTypography>
-      <MKTypography
-        display="block"
         variant="h5"
         color="white"
         mt={-0.625}
